@@ -19,9 +19,11 @@ class App extends Component {
     // await web3.eth.getBalance(lottery.options.address).then(console.log);
     // console.log('lottery address:', lottery.options.address);
     // console.log(lottery);
-
+    // await lottery.methods.manager().call().then((manager) => console.log('Manager: ', manager));
+    // await lottery.methods.getPlayers().call().then((players) => console.log('Players: ', players));
+    // await lottery.methods.getWinner().call().then((winner) => console.log('Winner: ', winner));
     const manager = await lottery.methods.manager().call();
-    const players = await lottery.methods.getPlayers.call();
+    const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
     this.setState({manager, players, balance}); // same as: this.setState({manager: manager, players: players, balance: balance})
     console.log(this.state);
