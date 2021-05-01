@@ -1,0 +1,97 @@
+import web3 from "./web3";
+
+const address = "0x57098BC57F721Ce5f476BA76797e7CAe19d4f487";
+// const address = "0x3DFcb0314fC4dB8965b624B471a3f1CF2952d3B5";
+
+const abi = [
+  {
+    inputs: [],
+    stateMutability: "nonpayable",
+    type: "constructor",
+    constant: undefined,
+    payable: undefined,
+    signature: "constructor",
+  },
+  {
+    inputs: [],
+    name: "getBalance",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0x12065fe0",
+  },
+  {
+    inputs: [],
+    name: "getPlayers",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0x8b5b9ccc",
+  },
+  {
+    inputs: [],
+    name: "getWinner",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0x8e7ea5b2",
+  },
+  {
+    inputs: [],
+    name: "join",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function",
+    constant: undefined,
+    payable: true,
+    signature: "0xb688a363",
+  },
+  {
+    inputs: [],
+    name: "manager",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0x481c6a75",
+  },
+  {
+    inputs: [],
+    name: "pickWinner",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+    constant: undefined,
+    payable: undefined,
+    signature: "0x5d495aea",
+  },
+  {
+    inputs: [[Object]],
+    name: "players",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0xf71d96cb",
+  },
+  {
+    inputs: [],
+    name: "winner",
+    outputs: [[Object]],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    payable: undefined,
+    signature: "0xdfbf53ae",
+  },
+];
+
+export default new web3.eth.Contract(abi, address);
